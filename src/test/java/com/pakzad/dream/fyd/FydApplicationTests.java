@@ -1,4 +1,4 @@
-package com.pakzad.dream.fyd;
+package com.pakzad.fyd;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
