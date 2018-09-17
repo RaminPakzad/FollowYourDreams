@@ -1,7 +1,6 @@
 package com.pakzad.fyd.service;
 
 import com.pakzad.fyd.repository.GoalRepository;
-import com.pakzad.fyd.repository.GoalTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class GoalService {
     private final GoalRepository goalRepository;
-    private final GoalTypeRepository goalTypeRepository;
-
+    private final GoalTypeService goalTypeService;
 
     @Autowired
-    public GoalService(GoalRepository goalRepository, GoalTypeRepository goalTypeRepository) {
+    public GoalService(GoalRepository goalRepository, GoalTypeService goalTypeService) {
         this.goalRepository = goalRepository;
-        this.goalTypeRepository = goalTypeRepository;
+        this.goalTypeService = goalTypeService;
     }
 }
